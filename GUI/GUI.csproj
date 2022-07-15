@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CAFC0F9-B425-4499-88E5-64AA1CCE9E52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\humae\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>C:\Users\humae\Desktop\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>C:\Users\humae\Desktop\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RawPrint, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RawPrint.0.2.0.0\lib\net40\RawPrint.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteFood.Designer.cs">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eat.Designer.cs">
+      <DependentUpon>Eat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpHome.Designer.cs">
+      <DependentUpon>EmpHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpLogin.Designer.cs">
+      <DependentUpon>EmpLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodList.Designer.cs">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOS_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FOS_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBurger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBurger.Designer.cs">
+      <DependentUpon>CreateBurger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ingredients.Designer.cs">
+      <DependentUpon>Ingredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyOrder.Designer.cs">
+      <DependentUpon>MyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox.Designer.cs">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellApprove.Designer.cs">
+      <DependentUpon>SellApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thankyou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thankyou.Designer.cs">
+      <DependentUpon>Thankyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFood.Designer.cs">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFood.resx">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eat.resx">
+      <DependentUpon>Eat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpHome.resx">
+      <DependentUpon>EmpHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpLogin.resx">
+      <DependentUpon>EmpLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodList.resx">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBurger.resx">
+      <DependentUpon>CreateBurger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingredients.resx">
+      <DependentUpon>Ingredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOrder.resx">
+      <DependentUpon>MyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MessageBox.resx">
+      <DependentUpon>MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellApprove.resx">
+      <DependentUpon>SellApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thankyou.resx">
+      <DependentUpon>Thankyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFood.resx">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FOS_DatabaseDataSet.xsc">
+      <DependentUpon>FOS_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FOS_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FOS_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FOS_DatabaseDataSet.xss">
+      <DependentUpon>FOS_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\McDonald%27s Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterCard Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_2_-_Cash_Register_2102044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_24-Cash_Register_2924837.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Money_10998.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icons_user_1564534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_business_2799208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\512px-MasterCard_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_hashtag1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_hashtag11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebookShare_20151119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebookShare_201511191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateYB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_label_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screen-shot-2015-01-18-at-8.16.46-PM_551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create-Your-Taste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wienerschnitzel-new-bigger-burgers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BigMac435X320 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beveimg01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingredient_img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_hashtag12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcAD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Bakery-Style-Bun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Brioche.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Bunless.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-100-Angus-Beef.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-chicken-filet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Portobello.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Classic-Cheddar-Cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Pepper-Jack-Cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Mozzarella-Cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Sliced-Fresh-Tomato.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Caramelised-Onions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Sliced-Jalapenos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Amercian-BBQ-Sauce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Mustard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Ketchup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mcdonalds-ingredients-Big-Mac-Special-Sauce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DATABASE\DATABASE.csproj">
+      <Project>{ead07812-78a8-4cfe-bbc0-640552dc2870}</Project>
+      <Name>DATABASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTITY\ENTITY.csproj">
+      <Project>{77429332-21e9-4ced-9f64-1e0fbdfca94f}</Project>
+      <Name>ENTITY</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_logout_49532.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_logout_59175.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_logout_173050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_check_1930264 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FOS Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FOS Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FOS Database.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\TY.jpg" />
+    <None Include="Resources\Thankyoou.jpg" />
+    <None Include="Resources\Thankyou.jpg" />
+    <None Include="Resources\McLogoSmall.png" />
+    <None Include="Resources\Mcdonalds_logo.png" />
+    <None Include="Resources\mcd-meals-chicken-mcnuggets.png" />
+    <None Include="Resources\Desserts.png" />
+    <None Include="Resources\icons8-chevron-right-30.png" />
+    <None Include="Resources\icons8-plus-30.png" />
+    <None Include="Resources\icons8-minus-30.png" />
+    <None Include="Resources\Tick-mark-icon-png-6619.png" />
+    <None Include="Resources\knife-and-fork-icon-png-24.jpg" />
+    <None Include="Resources\takeaway.png" />
+    <None Include="Resources\eatIn.png" />
+    <None Include="Resources\if_ic_close_48px_352270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
